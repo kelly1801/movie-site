@@ -1,8 +1,9 @@
 import React from 'react'
-
+import {useNavigate } from "react-router-dom";
 function Movie({image, year, title, imId}) {
+  let navigate = useNavigate()
   return (
-    <div className="movie__container">
+    <div className="movie__container" onClick={() => navigate(`${imId}`)}>
     <figure className="img--wrapper">
       <img src={image} className="movies--img"/>
       <figcaption className="movie_description">

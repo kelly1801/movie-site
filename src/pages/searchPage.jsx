@@ -5,6 +5,7 @@ import Movie from "../components/Movie";
 import LoadingState from "../components/LoadingState";
 import OnStart from "../components/OnStart";
 import axios from "axios";
+import MovieInfo from "./movieInfo";
 
 function SearchPage() {
   const [movies, setMovies] = useState([]);
@@ -41,6 +42,7 @@ function SearchPage() {
     ))
     .slice(0, 6);
 
+  
   function sortMovies(event) {
     setOrder(event.target.value);
 
@@ -64,7 +66,7 @@ console.log(orderOptions)
 
       <main>
         <div className="search__container ">
-          <h2>
+          <h2 >
             Search results for:
             <span className="spanResult color--text"> {searchResult} </span>
           </h2>

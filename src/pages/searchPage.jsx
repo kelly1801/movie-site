@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from "react";
-import Footer from "../components/footer";
+import React, { useState, useEffect} from "react";
 import Header from "../components/Header";
 import Movie from "../components/Movie";
 import LoadingState from "../components/LoadingState";
 import OnStart from "../components/OnStart";
 import axios from "axios";
-import MovieInfo from "./movieInfo";
+
 
 function SearchPage() {
   const [movies, setMovies] = useState([]);

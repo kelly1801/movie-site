@@ -9,6 +9,12 @@
   
   
 }
+.flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 :root {
   --primary: #120d31;
   --secondary: #efe7da;
@@ -18,7 +24,18 @@
   text-transform: capitalize;
   margin-left: 0.5rem;
 }
+.home-btn{
+width: 20%;
+  color: var(--secondary);
+  background-color: var(--primary);
+padding: 1.5rem ;
+  border-radius: 2rem;
+margin: 3rem 0;
+margin-left: 2.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 
+}
 .recolor{
   background-color: var(--primary);
   color: var(--secondary);

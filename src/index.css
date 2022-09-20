@@ -100,7 +100,7 @@ text-transform: uppercase;
 
 /*Header starts*/
 header {
-  background-image: url("./assets/hero-img.jpg");
+  background-image: url("./nature.jpg");
   background-position: center;
   position: relative;
   height: 300px;
@@ -214,4 +214,5 @@ text-align: center;
 footer {
   
   background-color: aqua;
+  height: 20vh;
 }

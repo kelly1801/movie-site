@@ -2,7 +2,7 @@ import React from 'react'
 
 function OnStart() {
   return (
-    <div className="welcome__div .movies__loading">
+    <div className="welcome__div ">
     <h2 className="welcome--text">
       Welcome to Moon movies, search something
     </h2>

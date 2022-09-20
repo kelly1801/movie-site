@@ -6,7 +6,7 @@ function Movie({image, year, title, imId}) {
     <figure className="img--wrapper">
       <img src={image} className="movies--img"/>
       <figcaption className="movie_description">
-        <h2 className="movie__title">Title: {title}</h2>
+        <h3 className="movie__title">Title: {title}</h3>
         <h3 className="movie__year">Year: {year}</h3>
         <h4 className="movie__imdb">imdbID: {imId}</h4>
       </figcaption>

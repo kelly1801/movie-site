@@ -10,7 +10,7 @@ function SearchPage() {
   const [movies, setMovies] = useState([]);
   const [searchResult, setId] = useState();
   const [loading, setLoading] = useState();
-
+  const [order, setOrder] = useState();
   function searchId(event) {
     setId(event.target.value);
   }
@@ -26,10 +26,10 @@ function SearchPage() {
   }
   useEffect(() => {
     setLoading(true);
-    console.log(movies)
+    console.log(movies);
   }, []);
 
-  const moviesArr = movies
+  let moviesArr = movies
     .map((movie) => (
       <Movie
         key={movie.imdbID}
@@ -40,6 +40,20 @@ function SearchPage() {
       />
     ))
     .slice(0, 6);
+
+  function sortMovies(event) {
+    setOrder(event.target.value);
+
+    let orderOptions =
+      order === "high_to_low"
+        ? movies.sort((a, b) =>  a.Year - b.Year)
+        : movies.sort((a, b) => b.Year - a.Year)
+
+console.log(orderOptions)
+
+      
+  }
+
   return (
     <>
       <Header
@@ -51,20 +65,25 @@ function SearchPage() {
       <main>
         <div className="search__container ">
           <h2>
-            Search results for: <span id="spanResult"> {searchResult} </span>
+            Search results for:
+            <span className="spanResult color--text"> {searchResult} </span>
           </h2>
 
-          <select id="sort_bar">
+          <select id="sort_bar" onClick={sortMovies}>
+            <option value="" selected>
+              -- Sort By Year --
+            </option>
             <option value="high_to_low">Most recent</option>
             <option value="low_to_high">older</option>
           </select>
         </div>
 
         <div className="movies">
-          {movies.length === 0 && <OnStart/>}
-          {movies.length != 0 && loading ? <LoadingState /> : moviesArr}</div>
+          {movies.length === 0 && <OnStart />}
+          {movies.length != 0 && loading ? <LoadingState /> : moviesArr}
+         
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

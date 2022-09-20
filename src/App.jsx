@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import SearchPage from '.movie-site/src/pages/SearchPage.jsx'
+import SearchPage from './movie-site/src/pages/SearchPage.jsx'
 import Home from "./pages/Home";
 
 import Footer from "./components/footer";
